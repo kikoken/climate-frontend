@@ -4,8 +4,6 @@ import { Map, GoogleApiWrapper } from 'google-maps-react'
 import { LocationApi } from '../../api'
 import { Google } from '../../config'
 
-import datatest from '../../data/data.json'
-
 class MapContainer extends Component {
   constructor(props) {
     super(props)
