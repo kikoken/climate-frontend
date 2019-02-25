@@ -1,0 +1,36 @@
+.ModalCapital {
+  background: rgba(255,255,255,0.4);
+  display: block;
+  position: fixed;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  z-index: 99;
+}
+
+.ModalCapital .wrapper {
+  background: white;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  padding: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ModalCapital .wrapper button {
+  border: none;
+  background: red;
+  color: white;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 8px;
+}
+
+.ModalCapital h3 small {
+  display: block;
+}
+

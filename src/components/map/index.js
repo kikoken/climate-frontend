@@ -4,9 +4,11 @@ import { Map, GoogleApiWrapper } from 'google-maps-react'
 import { LocationApi } from '../../api'
 import { Google } from '../../config'
 
+import datatest from '../../data/data.json'
+
 class MapContainer extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       center: {
         lat: 40.854885,
@@ -15,9 +17,10 @@ class MapContainer extends Component {
     }
   }
 
-  async onMapClicked(mapProps, map, event) {
-    let capital = await LocationApi.getCountryByCoords({lat: event.latLng.lat(), lng: event.latLng.lng()})
-    console.log(capital)
+  onMapClicked = async (mapProps, map, event) => {
+    let response = await LocationApi.getCountryByCoords({lat: event.latLng.lat(), lng: event.latLng.lng()})
+    console.log(response)
+    this.props.handlermap(response)
   }
   render() {
     return(
