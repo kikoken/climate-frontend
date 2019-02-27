@@ -5,4 +5,5 @@ RUN npm i -g serve
 RUN npm install
 ADD ./src /app/src
 ADD ./public /app/public
+CMD npm start:prod
 EXPOSE 3000
