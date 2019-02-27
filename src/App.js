@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   onHandlerMap= (climate) => {
-    this.setState({showModal: !this.state.showModal, data: climate.data})
+    this.setState({showModal: !this.state.showModal, data: climate})
   }
 
   render() {

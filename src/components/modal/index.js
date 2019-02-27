@@ -8,7 +8,7 @@ const ModalCapital = (props) => props.visible && (
     <div className="wrapper">
     <header>
       <h2>{props.climate.capital}</h2>
-      <button onClick={props.climate.onmodal}>cerrar</button>
+      <button onClick={props.onmodal}>cerrar</button>
     </header>
     <div className="modal-body">
       <h3>{props.climate.temperature} <small>temperatura</small></h3>
