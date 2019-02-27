@@ -16,7 +16,7 @@ class MapContainer extends Component {
   }
 
   onMapClicked = async (mapProps, map, event) => {
-    let response = await LocationApi.getCapitalClimate({lat: event.latLng.lat(), lng: event.latLng.lng()})
+    let response = await LocationApi.getCapitalClimate([event.latLng.lat(), event.latLng.lng()].join(','))
     console.log(response)
     if(response.data)
       this.props.handlermap(response.data)
