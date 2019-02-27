@@ -11,6 +11,14 @@ class LocationApi {
 
     return country
   }
+
+  async getCapitalClimate(coords) {
+    let uri = `https://api.climatecapital.cloud/api/wheather/${coords}`
+    let response = await fetch(uri)
+    let climate = await response.json()
+
+    return climate
+  }
 }
 
 export default new LocationApi(Google.KEY)

@@ -16,9 +16,12 @@ class MapContainer extends Component {
   }
 
   onMapClicked = async (mapProps, map, event) => {
-    let response = await LocationApi.getCountryByCoords({lat: event.latLng.lat(), lng: event.latLng.lng()})
+    let response = await LocationApi.getCapitalClimate({lat: event.latLng.lat(), lng: event.latLng.lng()})
     console.log(response)
-    this.props.handlermap(response)
+    if(response.data)
+      this.props.handlermap(response.data)
+    else
+      console.log('no exste datos de la zona')
   }
   render() {
     return(
