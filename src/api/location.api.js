@@ -13,7 +13,7 @@ class LocationApi {
   }
 
   async getCapitalClimate(coords) {
-    let uri = `https://climatecapital.cloud/api/wheather/${coords}`
+    let uri = `https://api.climatecapital.cloud/api/wheather/${coords}`
     let response = await fetch(uri)
     let climate = await response.json()
 
